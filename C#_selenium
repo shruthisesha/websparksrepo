@@ -24,8 +24,8 @@ namespace SeleniumTest
             IWebElement ele = driver.FindElement(By.ClassName("btn-github"));
             ele.Click();
           /* IWebElement login = driver.FindElement(By.Name("login"));
-           // login.SendKeys("shruthisesha@gmail.com");
-            //IWebElement password = driver.FindElement(By.Name("password"));
+            login.SendKeys("shruthisesha@gmail.com");
+            IWebElement password = driver.FindElement(By.Name("password"));
             password.SendKeys("shruthisesha@gmail.com");
             Thread.Sleep(2000);
             Console.Write("username value is entered \n");
