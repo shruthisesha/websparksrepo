@@ -1,0 +1,37 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace SeleniumTest
+{
+    class Program
+    {
+       public static void Main(string[] args)
+        {
+            Console.Write("test case started ");
+            //opens the  
+            IWebDriver driver = new ChromeDriver(@"C:\Users\shruthi\source\repos\SeleniumTest\packages\Selenium.Chrome.WebDriver.85.0.0");
+            // navigate to URL  
+            driver.Navigate().GoToUrl("https://todo-list-login.firebaseapp.com/#!/home");
+            Thread.Sleep(4000);
+            //Log in GitHub  
+            IWebElement ele = driver.FindElement(By.ClassName("btn-github"));
+            ele.Click();
+          /* IWebElement login = driver.FindElement(By.Name("login"));
+           // login.SendKeys("shruthisesha@gmail.com");
+            //IWebElement password = driver.FindElement(By.Name("password"));
+            password.SendKeys("shruthisesha@gmail.com");
+            Thread.Sleep(2000);
+            Console.Write("username value is entered \n");
+          */
+            //driver.Close();
+            Console.Write("test case ended ");
+        }
+    }
+}
